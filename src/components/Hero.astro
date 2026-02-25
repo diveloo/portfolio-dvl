@@ -126,25 +126,25 @@
         content: '';
         position: absolute;
         /* Hacemos que ocupe el mismo espacio que la imagen, más un poco extra */
-        top: 8%;
-        left: 10%; /* Ajusta esto si no se centra bien */
-        width: 480px; /* Mismo ancho que la imagen */
-        height: 450px; /* Mismo alto que la imagen */
+        top: 10%;
+        left: 15%; /* Ajusta esto si no se centra bien */
+        width: 400px; /* Mismo ancho que la imagen */
+        height: 400px; /* Mismo alto que la imagen */
         border-radius: 50%;
         /* Usamos tus colores de acento para el gradiente */
         background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
         /* EL TRUCO: Desenfocamos mucho este elemento */
-        filter: blur(40px);
+        filter: blur(70px);
         opacity: 0.6; /* Ajusta la intensidad del brillo (0.1 a 1.0) */
         z-index: 0; /* Se coloca detrás de la imagen */
         
         /* Un pequeño ajuste para mover el brillo hacia abajo y a la derecha, como una sombra real */
-        transform: translate(20px, 20px); 
+        transform: translate(25px, 10px); 
     }
 
     .image-placeholder {
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
         border-radius: 50%; /* Lo hace circular */
         background-color: #1f2937;
         border: 4px solid #374151;
@@ -156,8 +156,8 @@
     }
 
     .profile-image {
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 450px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--accent-purple);
@@ -183,7 +183,7 @@
     }
 
     .btn-downloadcv:hover {
-        background-position: 100% 50%;
+        background-position: 90% 50%;
     }
 
     /* RESPONSIVE: Diseño para móviles y tablets */

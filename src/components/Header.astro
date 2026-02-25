@@ -10,16 +10,23 @@
         <h1>Diego Vegas Losada</h1>
     </div>
     
+    <button id="menu-toggle" class="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+        </svg>
+    </button>
 
-    <nav class="menu-header">
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#aptitudes">Aptitudes</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    
+    <div id="nav-container" class="nav-container">
+        <nav class="menu-header">
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#aptitudes">Aptitudes</a>
+                <a href="#contacto">Contacto</a>
+        </nav>
 
-    <nav class="social-header">
+        <nav class="social-header">
         <a href="https://www.linkedin.com/in/divelo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -45,6 +52,11 @@
             </svg>
         </a>
     </nav>
+    </div>
+    
+    
+
+    
 </header>
 
 <style>
@@ -85,9 +97,23 @@
         letter-spacing: 0.5px;
     }
 
+    .hamburger-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+
     .menu-header {
         display: flex;
-        gap: 60px;
+        gap: 50px;
     }
 
     .menu-header a {
@@ -141,4 +167,52 @@
         transform: translateY(-1px); /* El botón "salta" un poquito hacia arriba */
         box-shadow: 0 8px 10px rgba(37, 99, 235, 0.3); /* Sombra azul brillante */
     }
+
+    @media (max-width: 900px){
+        .hamburger-btn {
+            display: block;
+        }
+
+        .nav-container {
+            position: absolute; /* Lo sacamos del flujo normal */
+            top: 100px; /* Lo ponemos justo debajo del header (ajusta esto si queda muy pegado) */
+            left: 0;
+            width: 100%;
+            background-color: var(--background-color);
+            flex-direction: column; /* Ponemos los elementos en columna */
+            padding: 40px 0;
+            gap: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 50;
+            
+            /* Ocultamos este menú por defecto */
+            display: flex;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .nav-container.is-open {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-header {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+    }
 </style>
+
+<script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navContainer = document.getElementById('nav-container');
+
+    menuToggle?.addEventListener('click', () => {
+        navContainer?.classList.toggle('is-open');
+    })
+</script>
