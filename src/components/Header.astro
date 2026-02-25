@@ -1,0 +1,120 @@
+<header class="header-body">
+    <div class="brand">
+        <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M7 8l-4 4l4 4" />
+                        <path d="M17 8l4 4l-4 4" />
+                        <path d="M14 4l-4 16" />
+                    </svg>
+        </div>
+        <h1>Diego Vegas Losada</h1>
+    </div>
+    
+
+    <nav class="menu-header">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#aptitudes">Aptitudes</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    
+
+    <button class="btn-downloadcv">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+            <path d="M7 11l5 5l5 -5" />
+            <path d="M12 4l0 12" />
+        </svg>
+        <span>Descargar CV</span>
+    </button>
+</header>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+    :root {
+        --background-color: #0b1120;
+    }
+    .header-body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Lexend", sans-serif;
+        color: white;
+        background-color: var(--background-color);
+        padding: 40px;
+    }
+
+    .brand{
+        display:flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .icon-box{
+        background-image: linear-gradient(135deg, #2563eb, #9115df);
+        padding: 6px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brand h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .menu-header {
+        display: flex;
+        gap: 60px;
+    }
+
+    .menu-header a {
+        background-image: linear-gradient(
+            to right, 
+            #cbd5e1 0%, 
+            #cbd5e1 33%, /* Parte izquierda: Gris normal */
+            #2563eb 66%, /* Parte derecha: Inicio gradiente azul */
+            #9115df 100% /* Parte derecha: Fin gradiente azul */
+        );
+        background-size: 300% 100%;
+        background-position: 0% 0%;
+
+        --webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.3rem;
+        transition: background-position 0.3s ease;
+    }
+
+    .menu-header a:hover {
+        background-position: 100% 0%;
+    }
+
+    .btn-downloadcv {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-image: linear-gradient(135deg, #1d4ed8, #9115df, #1d4ed8);
+        background-size: 200% 100%;
+        background-position: 0% 50%;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-position 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .btn-downloadcv:hover {
+        background-position: 100% 50%;
+    }
+</style>
