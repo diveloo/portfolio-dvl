@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="hero-section">
+<section id="hero" class="hero-section">
     <div class="hero-content">
         <h1>
             Hola, soy <br/>
@@ -38,9 +38,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 80px 10%; /* 80px arriba/abajo, 10% a los lados */
         width: 100%;
         max-width: 1400px;
+        height: calc(100vh - 120px);
         margin: 0 auto;
     }
 
@@ -97,22 +97,22 @@
         background-image: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
         color: white;
         border: none;
-    }
 
-    .btn-primary:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
     }
 
     .btn-secondary {
         background-color: transparent;
         color: white;
         border: 1px solid var(--text-muted);
-    }
 
-    .btn-secondary:hover {
-        border-color: white;
-        background-color: rgba(255, 255, 255, 0.1);
+        &:hover {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     }
 
     .hero-image-container {

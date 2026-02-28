@@ -7,7 +7,9 @@
                         <path d="M14 4l-4 16" />
                     </svg>
         </div>
-        <h1>Diego Vegas Losada</h1>
+        <a href="#hero">
+            <h1>Diego Vegas Losada</h1>
+        </a>
     </div>
     
     <button id="menu-toggle" class="hamburger-btn">
@@ -21,7 +23,7 @@
     <div id="nav-container" class="nav-container">
         <nav class="menu-header">
                 <a href="#experiencia">Experiencia</a>
-                <a href="#proyectos">Proyectos</a>
+                <a href="#projects">Proyectos</a>
                 <a href="#aptitudes">Aptitudes</a>
                 <a href="#contacto">Contacto</a>
         </nav>
@@ -65,6 +67,9 @@
 
 
     .header-body{
+        position: sticky;
+        top: 0;
+        z-index: 100;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -73,13 +78,29 @@
         background-color: var(--background-color);
         padding: 40px;
 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
     }
 
     .brand{
         display:flex;
         align-items: center;
         gap: 25px;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.3));
+        }
     }
 
     .icon-box{
@@ -92,9 +113,7 @@
     }
 
     .brand h1 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
+        
     }
 
     .hamburger-btn {
