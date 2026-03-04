@@ -1,0 +1,214 @@
+---
+---
+
+<section id="hero" class="hero-section">
+    <div class="hero-content">
+        <h1>
+            Hola, soy <br/>
+            <span class="highlight-name">Diego Vegas Losada</span>
+        </h1>
+        <h2>Estudiante de Ingeniería Informática</h2>
+        <p>
+            Apasionado por crear soluciones web limpias y eficientes. 
+            Estudiante de Ingeniería Informática enfocado en la mención de Ingeniería de Software.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-downloadcv">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" />
+                </svg>
+                <span>Descargar CV</span>
+            </button>
+            <button class="btn-secondary">Contactar</button>
+        </div>
+    </div>
+
+    <div class="hero-image-container">
+        <div class="image-placeholder">
+            <img class="profile-image" src="/foto_diego.jpg" alt="Foto de Diego Vegas Losada">
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+        height: calc(100vh - 120px);
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+
+    .highlight-name {
+        background-image: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+        color: #d1d5db;
+        font-weight: 600;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        max-width: 500px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Estilos de los botones similares a tu Header */
+    .btn-primary, .btn-secondary {
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Lexend", sans-serif;
+    }
+
+    .btn-primary {
+        background-image: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+        color: white;
+        border: none;
+
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: white;
+        border: 1px solid var(--text-muted);
+
+        &:hover {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .hero-image-container {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .hero-image-container::before {
+        content: '';
+        position: absolute;
+        /* Hacemos que ocupe el mismo espacio que la imagen, más un poco extra */
+        top: 10%;
+        left: 20%; /* Ajusta esto si no se centra bien */
+        width: 400px; /* Mismo ancho que la imagen */
+        height: 400px; /* Mismo alto que la imagen */
+        border-radius: 50%;
+        /* Usamos tus colores de acento para el gradiente */
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+        /* EL TRUCO: Desenfocamos mucho este elemento */
+        filter: blur(40px);
+        opacity: 0.6; /* Ajusta la intensidad del brillo (0.1 a 1.0) */
+        z-index: 0; /* Se coloca detrás de la imagen */
+        
+        /* Un pequeño ajuste para mover el brillo hacia abajo y a la derecha, como una sombra real */
+        transform: translate(25px, 10px); 
+    }
+
+    .image-placeholder {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%; /* Lo hace circular */
+        background-color: #1f2937;
+        border: 4px solid #374151;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-muted);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-image {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent-purple);
+        position: relative;
+        z-index: 10;
+    }
+
+    .btn-downloadcv {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-image: linear-gradient(135deg, #1d4ed8, #9115df, #1d4ed8);
+        background-size: 200% 100%;
+        background-position: 0% 50%;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: background-position 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .btn-downloadcv:hover {
+        background-position: 90% 50%;
+    }
+
+    /* RESPONSIVE: Diseño para móviles y tablets */
+    @media (max-width: 900px) {
+        .hero-section {
+            flex-direction: column-reverse; /* Pone la imagen arriba y el texto abajo */
+            text-align: center;
+            padding: 40px 5%;
+        }
+
+        .hero-content, .hero-image-container {
+            width: 100%;
+        }
+
+        .hero-content {
+            align-items: center;
+        }
+
+        .hero-image-container {
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
